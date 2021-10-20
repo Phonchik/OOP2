@@ -7,6 +7,7 @@ class Driver:
     def __lt__(self, other):
         return self.total < other.total
 
+
 array = []
 
 n, k =[int(x) for x in input().split()]
