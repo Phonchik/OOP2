@@ -1,6 +1,7 @@
 class GeometryError(ValueError):
     def __init__(self, description):
         self.description = description
+
     def __str__(self):
         self.description
 
@@ -12,12 +13,12 @@ class Point:
 
     def dist(self, other):
         if isinstance(other, Point):
-            return ((self.x - other.x)** 2 + (self.y - other.y)) ** 0.5
+            return ((self.x - other.x) ** 2 + (self.y - other.y)) ** 0.5
         else:
             raise ValueError("Передано не точно")
 
 
-p1 = Point(0 ,0)
-p2 = Point(3 ,3)
+p1 = Point(0, 0)
+p2 = Point(3, 3)
 print(p1.dist(p2))
 print(p1.dist(8))
