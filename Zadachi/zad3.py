@@ -1,11 +1,11 @@
 class Point:
-    def init(self, x, y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
     def dist(self, other):
         if isinstance(other, Point):
-            return ((self.x - other.x)+ (self.y - other.y)) ** 0.5
+            return ((self.x - other.x) ** 2 + (self.y - other.y)) ** 0.5
 
 
 class Vector(Point):
