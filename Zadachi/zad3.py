@@ -4,8 +4,9 @@ class Point:
         self.y = y
 
     def dist(self, other):
-        if isinstance(other, Point):
-            return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5
+        if not isinstance(other, Point):
+            raise ValueError("Невозможно изметрить растояние между точками исходя из этих данных")
+        return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5
 
 
 class Vector(Point):

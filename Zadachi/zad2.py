@@ -30,7 +30,7 @@ class Circle:
         self.centre = centre
         self.radius = radius
 
-    def perimetr(self):
+    def Perimeter(self):
 
     def area(self):
 
